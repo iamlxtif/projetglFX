@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.LoginController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <AnchorPane prefHeight="149.0" prefWidth="300.0" style="-fx-background-color: #344955;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="brandImageView" fitHeight="59.0" fitWidth="85.0" layoutX="121.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../imgs/dairy-products.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="132.0" layoutY="229.0" text="Hliba" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Fira Sans Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="199.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="inscriptionLayer" disable="true" opacity="0.0" prefHeight="400.0" prefWidth="300.0">
+                     <children>
+                        <ImageView fx:id="userImageView" fitHeight="39.0" fitWidth="38.0" layoutX="130.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../imgs/user-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="64.0" layoutY="173.0" prefHeight="14.0" prefWidth="82.0" text="Nom Utilisateur" textFill="#344955">
+                           <font>
+                              <Font name="Fira Sans Regular" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomUtilisateur" layoutX="64.0" layoutY="191.0" styleClass="input" stylesheets="@style.css" />
+                        <Label layoutX="63.0" layoutY="234.0" prefHeight="0.0" prefWidth="104.0" text="Mot De Passe" textFill="#344955">
+                           <font>
+                              <Font name="Fira Sans Regular" size="11.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="motDePasse" layoutX="63.0" layoutY="253.0" styleClass="input" stylesheets="@style.css" />
+                        <Button fx:id="connecterButton" layoutX="82.0" layoutY="327.0" mnemonicParsing="false" onAction="#connecterButtonOnAction" prefHeight="25.0" prefWidth="135.0" styleClass="submit" stylesheets="@style.css" text="Connecter" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="messageLabel" layoutX="74.0" layoutY="295.0" opacity="0.0" text="entrer votre informations" textFill="#e10707">
+                           <font>
+                              <Font name="Fira Sans Regular" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="creerCompteLayer" disable="true" opacity="0.0" prefHeight="400.0" prefWidth="300.0">
+                     <children>
+                        <Label layoutX="45.0" layoutY="73.0" text="Entrez un nom d'utilisateur" textFill="#344955">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomUtilisateur1" layoutX="82.0" layoutY="89.0" styleClass="input" stylesheets="@style.css" />
+                        <Label layoutX="45.0" layoutY="136.0" text="Entrez un mot de passe" textFill="#344955">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="motDePasse1" layoutX="83.0" layoutY="152.0" styleClass="input" stylesheets="@style.css" />
+                        <Label layoutX="45.0" layoutY="202.0" text="Re-entrez le mot de passe" textFill="#344955">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="motDePasse11" layoutX="83.0" layoutY="219.0" styleClass="input" stylesheets="@style.css" />
+                        <Label layoutX="45.0" layoutY="266.0" text="Entrez votre fonction" textFill="#344955">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="74.0" layoutY="331.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" styleClass="submit" stylesheets="@style.css" text="Créer" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="14.0" />
+                           </font>
+                        </Button>
+                        <ChoiceBox fx:id="cb" layoutX="82.0" layoutY="282.0" prefHeight="26.0" prefWidth="175.0" styleClass="input" stylesheets="@style.css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #344955;">
+                     <children>
+                        <Button fx:id="seConnecter" layoutY="5.0" mnemonicParsing="false" onAction="#seConnecterOnAction" prefHeight="11.0" prefWidth="150.0" stylesheets="@style.css" text="Se connecter" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="creerCompte" layoutX="150.0" layoutY="5.0" mnemonicParsing="false" onAction="#creerCompteOnAction" prefHeight="11.0" prefWidth="150.0" stylesheets="@style.css" text="Creer un Compte" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

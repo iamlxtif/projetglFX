@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.AgentCommercialController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <AnchorPane prefHeight="362.0" prefWidth="200.0" style="-fx-background-color: #344955;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="attribuerPrixButton" mnemonicParsing="false" onAction="#attribuerPrixButtonOnAction" prefHeight="44.0" prefWidth="200.0" stylesheets="@style.css" text="Attribuer un Prix" textFill="WHITE">
+                     <font>
+                        <Font name="Fira Sans Regular" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: #232f34;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="11.0" text="Agent Commercial" textFill="WHITE">
+                     <font>
+                        <Font name="Fira Sans Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane fx:id="attribuerPrixLayer" disable="true" opacity="0.0" prefHeight="362.0" prefWidth="399.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="46.0" layoutY="124.0" text="Référence du produit" textFill="#344955">
+                     <font>
+                        <Font name="Fira Sans Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="180.0" layoutY="118.0" styleClass="input" stylesheets="@style.css" />
+                  <Label layoutX="46.0" layoutY="166.0" text="Prix" textFill="#344955">
+                     <font>
+                        <Font name="Fira Sans Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="180.0" layoutY="160.0" styleClass="input" stylesheets="@style.css" />
+                  <Button layoutX="127.0" layoutY="221.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="145.0" styleClass="submit" stylesheets="@style.css" text="Attribuer" textFill="WHITE">
+                     <font>
+                        <Font name="Fira Sans Regular" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

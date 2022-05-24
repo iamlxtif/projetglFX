@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.DirecteurController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0">
+               <left>
+                  <AnchorPane prefHeight="400.0" prefWidth="170.0" style="-fx-background-color: #344955;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="etablirPlanButton" mnemonicParsing="false" onAction="#etablirPlanButtonOnAction" prefHeight="24.0" prefWidth="172.0" stylesheets="@style.css" text="Etablir Plan" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="editerPlanButton" layoutY="24.0" mnemonicParsing="false" onAction="#editerPlanButtonOnAction" prefHeight="24.0" prefWidth="172.0" stylesheets="@style.css" text="Editer Plan" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="consulterBilanButton" layoutY="48.0" mnemonicParsing="false" onAction="#consulterBilanButtonOnAction" prefHeight="24.0" prefWidth="172.0" stylesheets="@style.css" text="Consulter Bilan" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sauvegardeMonsuelleButton" layoutY="72.0" mnemonicParsing="false" onAction="#sauvegardeMonsuelleButtonOnAction" prefHeight="24.0" prefWidth="172.0" stylesheets="@style.css" text="Sauvegarde Monsuelle" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="comparerCaButton" layoutY="96.0" mnemonicParsing="false" onAction="#comparerCaButtonOnAction" prefHeight="24.0" prefWidth="172.0" stylesheets="@style.css" text="Comparer le CA" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: #232f34;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="14.0" layoutY="11.0" text="Directeur" textFill="WHITE">
+                           <font>
+                              <Font name="Fira Sans Regular" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="366.0" prefWidth="432.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="etablirPlanLayer" disable="true" layoutX="3.0" layoutY="3.0" opacity="0.0" prefHeight="360.0" prefWidth="427.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="123.0" text="Chiffres d'affaires" textFill="#344955">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CA" layoutX="209.0" layoutY="119.0" styleClass="input" stylesheets="@style.css" />
+                              <Label layoutX="46.0" layoutY="166.0" text="Date" textFill="#344955">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="210.0" layoutY="162.0" prefHeight="24.0" prefWidth="170.0" styleClass="input" stylesheets="@style.css" />
+                              <Button layoutX="112.0" layoutY="219.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="201.0" styleClass="submit" stylesheets="@style.css" text="Etablir" textFill="WHITE">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="editerPlanLayer" layoutX="1.0" layoutY="1.0" opacity="0.0" prefHeight="362.0" prefWidth="429.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="123.0" text="Chiffres d'affaires" textFill="#344955" translateY="10.0">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CA1" layoutX="209.0" layoutY="119.0" styleClass="input" stylesheets="@style.css" translateY="10.0" />
+                              <Button layoutX="112.0" layoutY="219.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="201.0" styleClass="submit" stylesheets="@style.css" text="Editer" textFill="WHITE" translateY="-10.0">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="consulterBilanLayer" disable="true" opacity="0.0" prefHeight="364.0" prefWidth="430.0">
+                           <children>
+                              <TableView fx:id="table" layoutX="11.0" layoutY="13.0" prefHeight="290.0" prefWidth="408.0" styleClass="table" stylesheets="@style.css">
+                                <columns>
+                                  <TableColumn fx:id="produit" prefWidth="99.0" styleClass="col" text="Produit" />
+                                    <TableColumn fx:id="coutRevienTotal" prefWidth="109.0" styleClass="col" text="CoutRevient" />
+                                    <TableColumn fx:id="gainTotal" prefWidth="110.0" styleClass="col" text="Gain" />
+                                  <TableColumn fx:id="quantiteTotal" prefWidth="89.0" styleClass="col" text="Quantité" />
+                                </columns>
+                              </TableView>
+                              <Label alignment="CENTER" layoutX="178.0" layoutY="321.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: #f9aa33;" textFill="WHITE">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="64.0" layoutY="328.0" text="Chiffre D'affaires" textFill="#344955">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="344.0" layoutY="328.0" text="DA" textFill="#344955">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sauvegardeMonsuelleLayer" disable="true" opacity="0.0" prefHeight="364.0" prefWidth="431.0">
+                           <children>
+                              <Button fx:id="creer" layoutX="148.0" layoutY="123.0" mnemonicParsing="false" onAction="#creerOnAction" prefHeight="29.0" prefWidth="136.0" styleClass="submit" stylesheets="@style.css" text="Creer" textFill="WHITE">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="smLabel1" alignment="CENTER" layoutX="65.0" layoutY="197.0" opacity="0.0" text="chiffre d'affaires">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="smLabel2" alignment="CENTER" layoutX="295.0" layoutY="197.0" opacity="0.0" text="date">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="smLabel3" alignment="CENTER" layoutX="60.0" layoutY="221.0" opacity="0.0" prefHeight="21.0" prefWidth="115.0" style="-fx-background-color: #f9aa33;" textFill="WHITE" />
+                              <Label fx:id="smLabel4" alignment="CENTER" layoutX="256.0" layoutY="221.0" opacity="0.0" prefHeight="21.0" prefWidth="115.0" style="-fx-background-color: #f9aa33;" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="comparerCaLayer" disable="true" opacity="0.0" prefHeight="364.0" prefWidth="431.0">
+                           <children>
+                              <Button fx:id="comparer" layoutX="150.0" layoutY="133.0" mnemonicParsing="false" onAction="#comparerOnAction" prefHeight="27.0" prefWidth="131.0" styleClass="submit" stylesheets="@style.css" text="Comparer" textFill="WHITE">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="215.0" opacity="0.0" text="hna message te3 comparaison" textFill="#344955">
+                                 <font>
+                                    <Font name="Fira Sans Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

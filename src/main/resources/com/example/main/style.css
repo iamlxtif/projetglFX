@@ -1,0 +1,43 @@
+.button{
+    -fx-border-radius: 0;
+    -fx-background-color:  #344955;
+}
+.button:hover{
+    -fx-background-color:  #4a6572;
+}
+.submit{
+    -fx-background-color: #f9aa33;
+}
+.submit:hover{
+    -fx-background-color: #ffb74c;
+}
+.input{
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: #f9aa33;
+    -fx-background-color: rgba(249, 170, 51, 0.1);
+}
+.table{
+    -fx-background-color: #dfd8d8;
+}
+.table .col{
+    -fx-background-color: #f9aa33;
+}
+.table .col .label{
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+.tabpane *.tab-header-area *.tab-header-background{
+    -fx-background-color: #344955;
+}
+.tabpane .tabb{
+    -fx-background-color: #344955;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: white;
+}
+.tabpane .tabb:hover,:selected{
+    -fx-background-color: #4a6572;
+}
+.tabpane .tabb .tab-label{
+    -fx-text-fill: white;
+    -fx-font-family: "Fira Code";
+}
